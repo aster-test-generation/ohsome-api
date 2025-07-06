@@ -16,7 +16,7 @@ java -Djdk.attach.allowAttachSelf=true -javaagent:/home/rkh/Downloads/share/lib/
 
 This application comes with 3 OpenAPI specifiactions for its 3 modules, I combined them into one `ohsome-combined.json` to facilitate the testing.
 
-The service should be running at port `8081`. Change `server.port` in `src/main/resources/application.properties` to set an alternative port. Use `jacococli`'s report or Jacoco Live to fetch the coverage data from `6300`.
+The service should be running at port `8080`. Change `server.port` in `src/main/resources/application.properties` to set an alternative port. Use `jacococli`'s report or Jacoco Live to fetch the coverage data from `6300`.
 
 This spec is viewable at `http://localhost:8080/swagger-ui.html`. You can also use this webpage to send REST requests to check if it is running. 
 
@@ -37,6 +37,6 @@ Run the service:
 java -Djdk.attach.allowAttachSelf=true -javaagent:"${EMB_BASE}/realtime-jacoco-agent-1.0-SNAPSHOT.jar" -jar target/ohsome-api-1.9.0-SNAPSHOT.jar --database.db=/home/rkh/Downloads/heidelberg.oshdb.mv.db
 ```
 
-The service should be running at port `8081` with jacoco agent on `8080`. Change `server.port` in `src/main/resources/application.properties` to set an alternative port. 
+The service should be running at port `8080` with jacoco agent on `8080`. Change `server.port` in `src/main/resources/application.properties` to set an alternative port. 
 
 This spec is viewable at `http://localhost:8080/swagger-ui.html`. You can also use this webpage to send REST requests to check if it is running. 
