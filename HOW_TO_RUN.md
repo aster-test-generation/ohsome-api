@@ -40,3 +40,8 @@ java -Djdk.attach.allowAttachSelf=true -javaagent:"${EMB_BASE}/realtime-jacoco-a
 The service should be running at port `8080` with jacoco agent on `8080`. Change `server.port` in `src/main/resources/application.properties` to set an alternative port. 
 
 This spec is viewable at `http://localhost:8080/swagger-ui.html`. You can also use this webpage to send REST requests to check if it is running. 
+
+Start EvoMaster in black-box mode (change the seed 105 and the 105 in outputFolder if necessary):
+```
+"/usr/lib/jvm/java-8-openjdk-amd64/jre/"/bin/java -Xms1G -Xmx4G -jar evomaster.jar --blackBox true --maxTime 3600s --bbSwaggerUrl ./ohsome-combined.json --bbTargetUrl http://localhost:8080/ --seed 105 --showProgress=true --testSuiteSplitType=NONE  --outputFormat JAVA_JUNIT_4 --outputFolder "/home/rhuang329/aster-exp/bb/tests/ohsome-api_evomaster_bb_v2__S105_11890"
+```
